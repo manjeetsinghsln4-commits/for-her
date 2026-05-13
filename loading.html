@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Loading...</title>
+
+<style>
+
+body{
+    margin:0;
+    height:100vh;
+    background:black;
+    color:#00ff99;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    flex-direction:column;
+    font-family:monospace;
+}
+
+.loader{
+    width:300px;
+    height:25px;
+    border:2px solid #00ff99;
+}
+
+.bar{
+    height:100%;
+    width:0%;
+    background:#00ff99;
+    animation:load 4s forwards;
+}
+
+@keyframes load{
+    to{
+        width:100%;
+    }
+}
+
+</style>
+</head>
+
+<body>
+
+<h1>Scanning relationship compatibility...</h1>
+
+<div class="loader">
+    <div class="bar"></div>
+</div>
+
+<script>
+
+setTimeout(()=>{
+
+    window.location.href='question1.html';
+
+},4200);
+
+</script>
+
+</body>
+</html>

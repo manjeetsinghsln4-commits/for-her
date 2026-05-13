@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Flowers 🌸</title>
+
+<style>
+
+body{
+    margin:0;
+    overflow:hidden;
+    height:100vh;
+    background:
+    radial-gradient(circle,#42004f,#050008);
+}
+
+.flower{
+    position:absolute;
+    bottom:-120px;
+    animation:rise linear infinite;
+}
+
+@keyframes rise{
+    to{
+        transform:
+        translateY(-130vh)
+        rotate(360deg);
+    }
+}
+
+.petal{
+    width:30px;
+    height:30px;
+    background:pink;
+    border-radius:50%;
+    position:absolute;
+}
+
+.center{
+    width:20px;
+    height:20px;
+    background:yellow;
+    border-radius:50%;
+    position:absolute;
+    top:20px;
+    left:20px;
+}
+
+.title{
+    position:absolute;
+    width:100%;
+    text-align:center;
+    top:30px;
+    color:white;
+    font-size:3rem;
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="title">
+I Love You ❤️
+</div>
+
+<script>
+
+for(let i=0;i<25;i++){
+
+    const flower=document.createElement('div');
+
+    flower.classList.add('flower');
+
+    flower.style.left=
+    Math.random()*100+'vw';
+
+    flower.style.animationDuration=
+    (8+Math.random()*8)+'s';
+
+    flower.innerHTML=`
+
+    <div class="petal"
+    style="top:0;left:20px;"></div>
+
+    <div class="petal"
+    style="top:20px;left:0;"></div>
+
+    <div class="petal"
+    style="top:20px;left:40px;"></div>
+
+    <div class="petal"
+    style="top:40px;left:20px;"></div>
+
+    <div class="center"></div>
+
+    `;
+
+    document.body.appendChild(flower);
+}
+
+</script>
+
+</body>
+</html>

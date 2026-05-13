@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Question ❤️</title>
+
+<style>
+body{
+    margin:0;
+    height:100vh;
+    background:#120018;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    color:white;
+    font-family:Arial;
+}
+
+.card{
+    background:rgba(255,255,255,.08);
+    padding:50px;
+    border-radius:30px;
+    text-align:center;
+}
+
+button{
+    padding:16px 30px;
+    margin:10px;
+    border:none;
+    border-radius:40px;
+    cursor:pointer;
+}
+
+.yes{
+    background:#ff4f9a;
+    color:white;
+}
+</style>
+</head>
+<body>
+
+<div class="card">
+<h1>Why are you so far away from me? 🥺</h1>
+
+<button class="yes" onclick="location.href='question2.html'">
+Because I miss you ❤️
+</button>
+
+<button id="moveBtn">I don't miss you</button>
+</div>
+
+<script>
+const btn=document.getElementById('moveBtn');
+
+btn.addEventListener('mouseover',()=>{
+    btn.style.position='absolute';
+    btn.style.left=Math.random()*80+'vw';
+    btn.style.top=Math.random()*80+'vh';
+});
+</script>
+
+<audio autoplay loop id="bgMusic">
+    <source src="music.mp3" type="audio/mp3">
+</audio>
+
+<script>
+document.addEventListener('click',()=>{
+    document.getElementById('bgMusic').play();
+},{ once:true });
+</script>
+
+</body>
+</html>
